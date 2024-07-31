@@ -1,0 +1,204 @@
+:root {
+    --bg-color: #1e1e1e; /* Dark background color */
+    --primary-color: #00ff00; /* Bright green for accents */
+    --dark-color: #282828; /* Slightly lighter dark color for sections */
+    --ambient-color: rgb(0, 255, 255); /* Light cyan for glowing effects */
+    --highlight-color: #00cc00; /* Highlight color for active sections */
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow-x: hidden;
+    background: #000;
+    background: radial-gradient(circle at 50% 50%, #000, #1e1e1e);
+    animation: bgAnimation 30s linear infinite;
+}
+
+/* Keyframe animation for a subtle gradient movement */
+@keyframes bgAnimation {
+    0% {
+        background: radial-gradient(circle at 50% 50%, #000, #1e1e1e);
+    }
+    50% {
+        background: radial-gradient(circle at 70% 30%, #000, #1e1e1e);
+    }
+    100% {
+        background: radial-gradient(circle at 50% 50%, #000, #1e1e1e);
+    }
+}
+.download-cv {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    display: inline-block;
+    font-size: 1em;
+}
+
+.download-cv:hover {
+    background: #00cc00;
+    transform: scale(1.1);
+}
+.intro {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.intro-content {
+    position: relative;
+    z-index: 1;
+}
+
+.animated-text {
+    margin-bottom: 20px;
+}
+
+.intro-content h1 {
+    margin: 0;
+    font-size: 2em;
+    line-height: 1.2;
+}
+
+.intro-content .line {
+    display: block;
+}
+
+.intro-content .letter {
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    animation: fallIn 1.5s forwards;
+}
+
+@keyframes fallIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-100vh) rotate(720deg);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(0) rotate(360deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.intro-content .letter:nth-child(1) { animation-delay: 0.1s; }
+.intro-content .letter:nth-child(2) { animation-delay: 0.2s; }
+.intro-content .letter:nth-child(3) { animation-delay: 0.3s; }
+.intro-content .letter:nth-child(4) { animation-delay: 0.4s; }
+.intro-content .letter:nth-child(5) { animation-delay: 0.5s; }
+/* Repeat above for all letters in line 1 */
+
+.intro-content #line2 .letter:nth-child(1) { animation-delay: 0.6s; }
+.intro-content #line2 .letter:nth-child(2) { animation-delay: 0.7s; }
+/* Continue for the rest of the letters in line 2 */
+
+.intro-content .button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    z-index: 1;
+}
+
+.intro-content .button:hover {
+    background: #00cc00;
+    transform: scale(1.1);
+}
+
+header {
+    background: var(--dark-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+section {
+    margin: 10px;
+    padding: 20px;
+    background: var(--dark-color);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 45%;
+    min-width: 300px;
+}
+
+h2 {
+    color: var(--primary-color);
+    cursor: pointer;
+    margin: 0;
+    padding: 10px;
+    background: var(--dark-color);
+    border-radius: 5px;
+    transition: background 0.3s;
+    text-shadow: 0 0 10px var(--ambient-color), 0 0 20px var(--ambient-color), 0 0 30px var(--ambient-color);
+}
+
+.toggle-content {
+    display: none;
+    padding: 10px;
+    background: var(--dark-color);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.3s;
+}
+
+.toggle-header:hover {
+    background: #2a2a2a;
+}
+
+.toggle-section.active .toggle-content {
+    display: block;
+    opacity: 1;
+}
+
+.toggle-section.active {
+    box-shadow: 0 0 20px var(--highlight-color);
+    transform: scale(1.02);
+}
+
+footer {
+    background: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
