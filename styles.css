@@ -1,8 +1,8 @@
 :root {
     --bg-color: #1e1e1e; /* Dark background color */
-    --primary-color: #00dc00; /* Bright green for accents */
+    --primary-color: #00aa00; /* Bright green for accents */
     --dark-color: #282828; /* Slightly lighter dark color for sections */
-    --ambient-color: rgb(0, 255, 255); /* Light cyan for glowing effects */
+    --ambient-color: #00e3e7; /* Light cyan for glowing effects */
     --highlight-color: #00cc00; /* Highlight color for active sections */
 }
 
@@ -37,14 +37,15 @@ body {
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s, transform 0.3s;
-    display: inline-block;
+    
     font-size: 1em;
 }
 
 .download-cv:hover {
-    background: #00cc00;
+    background: #00ff00;
     transform: scale(1.1);
 }
+
 .intro {
     position: relative;
     height: 100vh;
@@ -58,6 +59,7 @@ body {
 .intro-content {
     position: relative;
     z-index: 1;
+	
 }
 
 .animated-text {
@@ -68,6 +70,7 @@ body {
     margin: 0;
     font-size: 2em;
     line-height: 1.2;
+	animation: movingShadow 5s infinite;
 }
 
 .intro-content .line {
@@ -105,7 +108,34 @@ body {
 
 .intro-content #line2 .letter:nth-child(1) { animation-delay: 0.6s; }
 .intro-content #line2 .letter:nth-child(2) { animation-delay: 0.7s; }
+.intro-content #line2 .letter:nth-child(3) { animation-delay: 0.6s; }
+.intro-content #line2 .letter:nth-child(4) { animation-delay: 0.7s; }
+.intro-content #line2 .letter:nth-child(5) { animation-delay: 0.6s; }
+.intro-content #line2 .letter:nth-child(6) { animation-delay: 0.7s; }
+.intro-content #line2 .letter:nth-child(7) { animation-delay: 0.6s; }
+.intro-content #line2 .letter:nth-child(8) { animation-delay: 0.7s; }
+.intro-content #line2 .letter:nth-child(9) { animation-delay: 0.6s; }
+.intro-content #line2 .letter:nth-child(10) { animation-delay: 0.7s; }
+.intro-content #line2 .letter:nth-child(11) { animation-delay: 0.6s; }
+.intro-content #line2 .letter:nth-child(12) { animation-delay: 0.7s; }
+.intro-content #line2 .letter:nth-child(13) { animation-delay: 0.6s; }
+.intro-content #line2 .letter:nth-child(14) { animation-delay: 0.7s; }
+.intro-content #line2 .letter:nth-child(15) { animation-delay: 0.6s; }
+.intro-content #line2 .letter:nth-child(16) { animation-delay: 0.7s; }
+.intro-content #line2 .letter:nth-child(17) { animation-delay: 0.6s; }
+.intro-content #line2 .letter:nth-child(18) { animation-delay: 0.7s; }
+.intro-content #line2 .letter:nth-child(19) { animation-delay: 0.6s; }
+.intro-content #line2 .letter:nth-child(20) { animation-delay: 0.7s; }
+.intro-content #line2 .letter:nth-child(21) { animation-delay: 0.6s; }
+.intro-content #line2 .letter:nth-child(22) { animation-delay: 0.7s; }
+.intro-content #line2 .letter:nth-child(23) { animation-delay: 0.6s; }
+.intro-content #line2 .letter:nth-child(24) { animation-delay: 0.7s; }
+.intro-content #line2 .letter:nth-child(25) { animation-delay: 0.6s; }
+.intro-content #line2 .letter:nth-child(26) { animation-delay: 0.7s; }
+.intro-content #line2 .letter:nth-child(27) { animation-delay: 0.6s; }
+.intro-content #line2 .letter:nth-child(28) { animation-delay: 0.7s; }
 /* Continue for the rest of the letters in line 2 */
+
 
 .intro-content .button {
     margin-top: 20px;
@@ -114,12 +144,19 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s,transform 0.3s;
+	display: inline-block;
     z-index: 1;
 }
-
+@keyframes movingShadow {
+    0% { text-shadow: 2px 2px 10px #ff0000, -2px -2px 10px #00fbff; }
+    25% { text-shadow: 2px 2px 10px #00fbff, -2px -2px 10px #0000ff; }
+    50% { text-shadow: 2px 2px 10px #0000ff, -2px -2px 10px #ff0000; }
+    75% { text-shadow: 2px 2px 10px #ff00ff, -2px -2px 10px #ffff00; }
+    100% { text-shadow: 2px 2px 10px #ffff00, -2px -2px 10px #ff00ff; }
+}
 .intro-content .button:hover {
-    background: #00cc00;
+    background: #00ff00;
     transform: scale(1.1);
 }
 
@@ -166,7 +203,7 @@ h2 {
     background: var(--dark-color);
     border-radius: 5px;
     transition: background 0.3s;
-    text-shadow: 0 0 10px var(--ambient-color), 0 0 20px var(--ambient-color), 0 0 30px var(--ambient-color);
+    text-shadow: 0 0 8px var(--ambient-color), 0 0 20px var(--ambient-color), 0 0 30px var(--ambient-color);
 }
 
 .toggle-content {
