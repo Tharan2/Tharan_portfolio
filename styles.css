@@ -1,6 +1,6 @@
 :root {
     --bg-color: #1e1e1e; /* Dark background color */
-    --primary-color: #00ff00; /* Bright green for accents */
+    --primary-color: #00dc00; /* Bright green for accents */
     --dark-color: #282828; /* Slightly lighter dark color for sections */
     --ambient-color: rgb(0, 255, 255); /* Light cyan for glowing effects */
     --highlight-color: #00cc00; /* Highlight color for active sections */
